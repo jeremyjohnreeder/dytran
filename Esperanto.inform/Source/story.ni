@@ -8,7 +8,7 @@ The story headline is "A dynamic translation". The story genre is "Translation".
 
 Part 2 - Configuration
 
-Use the serial comma. Use no scoring. The World is a room.
+Use the serial comma. Use no scoring. Translation is a room.
 
 
 Part 3 - Rules 
@@ -40,6 +40,20 @@ To say (N - a number) in words:
 	otherwise:
 		say the name corresponding to a number of (N) in the Table of Number Names.
 
+The File of Original Text (owned by another project) is called "originaltext".
+The File of Translated Text is called "translatedtext".
+
+When play begins:
+	while one is one:
+		[TODO: flush the console buffer]
+		while not ready to read the File of Original Text:
+			do nothing [until the client has finished writing the file];
+		let the original text be "[text of the File of Original Text]";
+		let the original text be line number (number of lines in original text) [just the last line] in the original text;
+		mark the File of Translated Text as not ready to read;
+		write the translation of the original text to the File of Translated Text;
+		mark the File of Original Text as not ready to read;
+		mark the File of Translated Text as ready to read.
 
 Part 4 - Data
 
@@ -62,4 +76,5 @@ Number	Name
 Table 2 - Translations
 Source	Translation
 "How are you?"	"Kiel vi fartas?"
-"[bracket]number of apples in words[close bracket] apple[bracket]s[close bracket] are on the table."	"[number of apples in words] pomo[j] estas sur la tablo."
+"[bracket]Number of apples[close bracket] apple[bracket]s[close bracket] are on the table."	"[Number of apples] pomo[j] estas sur la tablo."
+"[bracket]Number of apples in words[close bracket] apple[bracket]s[close bracket] are on the table."	"[Number of apples in words] pomo[j] estas sur la tablo."
